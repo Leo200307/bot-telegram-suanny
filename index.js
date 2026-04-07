@@ -28,10 +28,10 @@ bot.setWebHook(`${URL}/bot${TOKEN}`);
 function getWelcomeMessage() {
     return {
         type: 'photo',
-        media: 'https://i.postimg.cc/NLvHbqm9/img2.jpg',
-        caption: `🙈 **SHUANNY SHIRLEY😈**
+        media: 'https://i.postimg.cc/L6j6SHR9/img2.jpg',
+        caption: `🙈 *YHANE LA MOROCHA😈*
 
-🔥 **𝗦𝗨𝗦𝗖𝗥𝗜𝗕𝗘𝗧𝗘😉🔥**
+🔥 **𝗦𝗨𝗦𝗖𝗥𝗜𝗕𝗘𝗧𝗘😉 SEMANA PROMOCIONAL🔥**
 
 Hola, me alegro de que finalmente me hayas encontrado 🔥🔥  
 ¿Quieres descubrir el contenido de mi canal VIP 🙈🔥?
@@ -39,12 +39,11 @@ Hola, me alegro de que finalmente me hayas encontrado 🔥🔥
 Vamos al grano, ambos sabemos por qué estás aquí jeje 😏  
 Y sí, la pasarás increíble en mi VIP 🫣🔥
 
-💙 **CON UNA PROPINA DE 10 DÓLARES**  
+💙 ** CON UNA PROPINA DE 22 DÓLARES**  
 Seras parte de mi comunidad mas especial,
 Desbloqueas fotos y videos MUY exclusivos 🔥
 
-🔥 **𝗟𝗔 𝗦𝗨𝗦𝗖𝗥𝗜𝗣𝗖𝗜𝗢𝗡 𝗗𝗨𝗥𝗔 𝗨𝗡 𝗠𝗘𝗦**  
-Tipo OnlyFans 😈  
+
 (Contenido SOLO para suscriptores VIP)
 
 👇 Elige un método de pago para empezar`,
@@ -62,7 +61,6 @@ app.post(`/bot${TOKEN}`, async (req, res) => {
 
     const update = req.body;
 
-    // Mensaje rápido anti-sleep
     if (update.message && update.message.chat) {
         try {
             await bot.sendMessage(
@@ -106,7 +104,7 @@ bot.on('callback_query', async (query) => {
             await bot.editMessageMedia(
                 {
                     type: 'photo',
-                    media: 'https://i.postimg.cc/dVKm0ZHY/img6.jpg',
+                      media: 'https://i.postimg.cc/TP3RngbX/img6.jpg',
                     caption: `𝗛𝗢𝗟𝗜 💕🔥
 TODOS MIS MÉTODOS DE PAGO 🥰
 
@@ -120,6 +118,7 @@ TODOS MIS MÉTODOS DE PAGO 🥰
                         inline_keyboard: [
                             [{ text: '🇧🇴 QR Bolivia', callback_data: 'qr_bolivia' }],
                             [{ text: '💳 PayPal', callback_data: 'paypal' }],
+                            [{ text: '💳 Pago con tarjeta', callback_data: 'tarjeta' }],
                             [{ text: '⬅️ Volver', callback_data: 'volver' }]
                         ]
                     }
@@ -132,8 +131,8 @@ TODOS MIS MÉTODOS DE PAGO 🥰
             await bot.editMessageMedia(
                 {
                     type: 'photo',
-                    media: 'https://i.postimg.cc/25Q155VZ/Whats-App-Image-2026-02-07-at-14-18-45.jpg',
-                    caption: `🇧🇴 **PAGAR 100 BS**
+                      media: 'https://i.postimg.cc/9fhm0smX/IMG_20260406_WA0106.jpg',
+                    caption: `🇧🇴 *PAGA 200 BS*
 
 📌 Saca una captura y pagalo por tu banca  
 ⬇️ Envía el comprobante de recibo de pago⬇️`,
@@ -144,51 +143,80 @@ TODOS MIS MÉTODOS DE PAGO 🥰
                     reply_markup: {
                         inline_keyboard: [
                             [{ text: '⬅️ Volver', callback_data: 'metodo_pago' }],
-                            [{ text: '✅ Ya pagué', url: 'https://t.me/agentedeinformacion' }]
+                            [{ 
+  text: '✅ Ya pagué', 
+  url: 'https://t.me/agentedeinformacion?text=Hola%20Yhane,%20te%20mando%20la%20captura,%20pagué%20por%20QR%20Bolivia' 
+}]
                         ]
                     }
                 }
             );
         }
 
-       // ===== PAYPAL =====
-else if (query.data === 'paypal') {
-    await bot.editMessageMedia(
-        {
-            type: 'photo',
-            media: 'https://i.postimg.cc/5y4rgHF9/depositphotos-220680152-stock-illustration-paypal-logo-printed-white-paper.jpg',
-            caption: `✨💎 **SUSCRIPCIÓN GRUPO VIP** 💎✨
+        // ===== PAYPAL =====
+        else if (query.data === 'paypal') {
+            await bot.editMessageMedia(
+                {
+                    type: 'photo',
+                    media: 'https://i.postimg.cc/5y4rgHF9/depositphotos-220680152-stock-illustration-paypal-logo-printed-white-paper.jpg',
+                    caption: `💳 **PAGO POR PAYPAL**
 
-Si quieres suscribirte a mi **Grupo VIP** 💎 y acceder a **contenido exclusivo mío** 😘🔥, puedes hacerlo con un solo pago de:
+📌 Monto: **22 USD**
+📧 \`alejandrohinojosasoria237@gmail.com\`
 
-💰 **11.50 USD**
-
-💳 **PAGO POR PAYPAL** 💙
-
-📌 **Monto:** **11.50 USD**
-⬇️ Puedes pagar tu suscripción bb a este correo
-(es de un familiar mío) ⬇️
-
-📧 **Correo PayPal (copiar y pegar):**
-\`alejandrohinojosasoria237@gmail.com\`
-
-Nos vemos dentro del VIP 🔥💎`,
-        },
-        {
-            chat_id: chatId,
-            message_id: messageId,
-            reply_markup: {
-                inline_keyboard: [
-                    [{ text: '⬅️ Volver', callback_data: 'metodo_pago' }],
-                    [{ text: '✅ Enviar captura', url: 'https://t.me/agentedeinformacion' }]
-                ]
-            }
+Envía tu captura después del pago 💎`,
+                },
+                {
+                    chat_id: chatId,
+                    message_id: messageId,
+                    reply_markup: {
+                        inline_keyboard: [
+                            [{ text: '⬅️ Volver', callback_data: 'metodo_pago' }],
+                            [{ 
+  text: '✅ Enviar captura', 
+  url: 'https://t.me/agentedeinformacion?text=Hola%20Yhane,%20te%20mando%20la%20captura,%20pagué%20por%20PayPal' 
+}]
+                        ]
+                    }
+                }
+            );
         }
-    );
-}
 
+        // ===== PAGO CON TARJETA =====
+        else if (query.data === 'tarjeta') {
+            await bot.editMessageMedia(
+                {
+                    type: 'photo',
+                    media: 'https://i.postimg.cc/NMF1X4FH/Screenshot_20260213_110627_Chrome.jpg',
+                    caption: `💳 **SUSCRIPCIÓN CON TARJETA**
 
-        // ===== VOLVER AL INICIO (EDITAR MENSAJE) =====
+La suscripción por tarjeta es de **22 USD**  
+
+**Pasos para pagar:**
+
+1️⃣ Presiona el botón **Ir a pagar**  
+2️⃣ Coloca tu correo (recibirás un código)  
+3️⃣ Ingresa los datos de tu tarjeta  
+4️⃣ Envía la captura de la transacción`,
+                },
+                {
+                    chat_id: chatId,
+                    message_id: messageId,
+                    reply_markup: {
+                        inline_keyboard: [
+                                  [{ text: '💳 Ir a pagar', url: 'https://app.takenos.com/pay/6ba0a07c-8985-45cb-8a2e-f324d9112e87' }],
+                            [{ 
+  text: '📤 Enviar captura', 
+  url: 'https://t.me/agentedeinformacion?text=Hola%20Yhane,%20te%20mando%20la%20captura,%20pagué%20con%20tarjeta' 
+}],
+                            [{ text: '⬅️ Volver', callback_data: 'metodo_pago' }]
+                        ]
+                    }
+                }
+            );
+        }
+
+        // ===== VOLVER AL INICIO =====
         else if (query.data === 'volver') {
             await bot.editMessageMedia(
                 {
@@ -204,7 +232,6 @@ Nos vemos dentro del VIP 🔥💎`,
             );
         }
 
-        // cerrar loading
         await bot.answerCallbackQuery(query.id);
 
     } catch (e) {
