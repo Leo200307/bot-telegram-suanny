@@ -28,7 +28,7 @@ bot.setWebHook(`${URL}/bot${TOKEN}`);
 function getWelcomeMessage() {
     return {
         type: 'photo',
-        media: 'https://i.postimg.cc/L6j6SHR9/img2.jpg',
+        media: 'https://i.postimg.cc/Zq9gN8DD/In_Shot_20260406_212133217.jpg',
         caption: `🙈 *YHANE LA MOROCHA😈*
 
 🔥 **𝗦𝗨𝗦𝗖𝗥𝗜𝗕𝗘𝗧𝗘😉 SEMANA PROMOCIONAL🔥**
