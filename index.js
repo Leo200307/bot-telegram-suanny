@@ -39,7 +39,7 @@ Hola, me alegro de que finalmente me hayas encontrado 🔥🔥
 Vamos al grano, ambos sabemos por qué estás aquí jeje 😏  
 Y sí, la pasarás increíble en mi VIP 🫣🔥
 
-💙 ** CON UNA PROPINA DE 22 DÓLARES**  
+💙 ** CON UNA PROPINA DE 12 DÓLARES**  
 Seras parte de mi comunidad mas especial,
 Desbloqueas fotos y videos MUY exclusivos 🔥
 
@@ -131,8 +131,8 @@ TODOS MIS MÉTODOS DE PAGO 🥰
             await bot.editMessageMedia(
                 {
                     type: 'photo',
-                      media: 'https://i.postimg.cc/9fhm0smX/IMG_20260406_WA0106.jpg',
-                    caption: `🇧🇴 *PAGA 200 BS*
+                      media: 'https://i.postimg.cc/gjXjDPLn/IMG-20260127-WA0000(1).jpg',
+                    caption: `🇧🇴 *PAGA 100 BS*
 
 📌 Saca una captura y pagalo por tu banca  
 ⬇️ Envía el comprobante de recibo de pago⬇️`,
@@ -161,7 +161,7 @@ TODOS MIS MÉTODOS DE PAGO 🥰
                     media: 'https://i.postimg.cc/5y4rgHF9/depositphotos-220680152-stock-illustration-paypal-logo-printed-white-paper.jpg',
                     caption: `💳 **PAGO POR PAYPAL**
 
-📌 Monto: **22 USD**
+📌 Monto: **12 USD**
 📧 \`alejandrohinojosasoria237@gmail.com\`
 
 Envía tu captura después del pago 💎`,
@@ -190,7 +190,7 @@ Envía tu captura después del pago 💎`,
                     media: 'https://i.postimg.cc/NMF1X4FH/Screenshot_20260213_110627_Chrome.jpg',
                     caption: `💳 **SUSCRIPCIÓN CON TARJETA**
 
-La suscripción por tarjeta es de **22 USD**  
+La suscripción por tarjeta es de **12 USD**  
 
 **Pasos para pagar:**
 
@@ -204,7 +204,7 @@ La suscripción por tarjeta es de **22 USD**
                     message_id: messageId,
                     reply_markup: {
                         inline_keyboard: [
-                                  [{ text: '💳 Ir a pagar', url: 'https://app.takenos.com/pay/6ba0a07c-8985-45cb-8a2e-f324d9112e87' }],
+                                  [{ text: '💳 Ir a pagar', url: 'https://app.takenos.com/pay/6a19d483-95ff-40ea-974e-c74470f4e958' }],
                             [{ 
   text: '📤 Enviar captura', 
   url: 'https://t.me/agentedeinformacion?text=Hola%20Yhane,%20te%20mando%20la%20captura,%20pagué%20con%20tarjeta' 
